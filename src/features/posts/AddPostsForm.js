@@ -17,11 +17,7 @@ const AddPostsForm = () => {
     const onSavePostsClicked = () => {
         if (title && content) {
             dispatch(
-                postAdded({
-                    id: nanoid(),
-                    title,
-                    content
-                })
+                postAdded(title, content)
             )
 
             setTitle("")
